@@ -11,15 +11,15 @@ def index(request):
     # Note that the first parameter is the template we wish to use.
     
     #@ Chapter 3
-    return HttpResponse("Rango says hey there partner!<br> <a href='/rango/about'>About</a>.")
+    #return HttpResponse("Rango says hey there partner!<br> <a href='/rango/about'>About</a>.")
 
     #@ Chapter 4
-    #return render(request, 'rango/index.html', context=context_dict)
+    return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
     
     #@ Chapter 3
-    return HttpResponse("Rango says here is the about page. <a href='/rango/'>Index</a>.")
+    #return HttpResponse("Rango says here is the about page. <a href='/rango/'>Index</a>.")
 
     #@ Chapter 4
-    #return render(request, 'rango/about.html')
+    return render(request, 'rango/about.html')
