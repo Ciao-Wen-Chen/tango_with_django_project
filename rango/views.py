@@ -11,7 +11,6 @@ from django.shortcuts import redirect
 from rango.models import Category
 from rango.models import Page
 
-
 def index(request):
     # Construct a dictionary to pass to the template engine as its context.
     # Chapter 6
@@ -35,7 +34,12 @@ def about(request):
     #@ Chapter 3
     #return HttpResponse("Rango says here is the about page. <a href='/rango/'>Index</a>.")
     #@ Chapter 4
-    return render(request, 'rango/about.html')
+    #return render(request, 'rango/about.html')
+    #@ Chapter 8 
+    print(request.method)
+    print(request.user)
+    return render(request, 'rango/about.html', {})
+    
 
 #Chapter 6
 #category_name_slug, which will store the encoded category name.
